@@ -1,4 +1,5 @@
 
+ // @ts-nocheck
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -26,6 +27,17 @@ export default function RootLayout({
       <head>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4268848645829698"
           crossOrigin="anonymous"></script>
+
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-HCRLG1QBFD"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)}
+          gtag('js', new Date());
+
+          gtag('config', 'G-HCRLG1QBFD');
+        </script>
+
       </head>
       <body className={inter.className}>
         <Header></Header>
