@@ -1,0 +1,10 @@
+services:
+  ui:
+    image: ui
+    ports: 
+     - "3000:3000"
+    networks:
+      - dev-net
+networks:
+  dev-net:
+    external: true
