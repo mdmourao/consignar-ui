@@ -16,17 +16,21 @@ export const MainPage = () => {
 
     return (
         <>
-            <div className="grid py-[5vh] sm:py-[7vh] flex flex-col items-center justify-center place-content-center">
+            <div className="py-[5vh] sm:py-[7vh] flex flex-col items-center justify-center place-content-center	text-center">
                 <h1 className="font-medium text-4xl text-black mb-3 animate-in fade-in slide-in-from-bottom-3 duration-1000 ease-in-out text-center">
                     Consignação IRS 0,5%
                 </h1>
 
-                <p className="text-gray-600 mb-12 text-base animate-in fade-in slide-in-from-bottom-4 duration-1200 ease-in-out text-center">
-                    1941 Localidades e 5036 Instuições
-                    <p className="text-gray-400 text-base animate-in fade-in slide-in-from-bottom-4 duration-1200 ease-in-out text-center">
+                <div>
+                    <p className="text-gray-600 text-base animate-in fade-in slide-in-from-bottom-4 duration-1200 ease-in-out text-center">
+                        1941 Localidades e 5036 Instuições
+
+                    </p>
+                    <p className="text-gray-400  mb-12  text-base animate-in fade-in slide-in-from-bottom-4 duration-1200 ease-in-out text-center">
                         IRS 2023 (a entregar em 2024)
                     </p>
-                </p>
+                </div>
+
 
 
                 <Button className="mb-6 " color="default" variant="bordered" onClick={(e) => {
