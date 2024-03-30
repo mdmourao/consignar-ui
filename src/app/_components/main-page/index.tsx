@@ -27,8 +27,8 @@ export const MainPage = () => {
 
                 <Button className="mb-6 " color="default" variant="bordered" onClick={(e) => {
                     axios("/api/entities/random").then((r)=>{
-                        (r.data as Entity).id
-                        router.push(`/entity/${(r.data as Entity).id}`, { scroll: false })
+                        console.log((r.data.data as Entity))
+                        router.push(`/entity/${(r.data.data as Entity).id}`, { scroll: false })
                     })
                 }} startContent={<GiCardRandom />}>
                     Entidade Aleatória
