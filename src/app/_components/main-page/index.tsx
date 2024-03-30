@@ -21,13 +21,16 @@ export const MainPage = () => {
                     Consignação IRS 0,5%
                 </h1>
 
-                <p className="text-gray-500 mb-12 text-base animate-in fade-in slide-in-from-bottom-4 duration-1200 ease-in-out">
+                <p className="text-gray-600 mb-12 text-base animate-in fade-in slide-in-from-bottom-4 duration-1200 ease-in-out text-center">
                     1941 Localidades e 5036 Instuições
+                    <p className="text-gray-400 text-base animate-in fade-in slide-in-from-bottom-4 duration-1200 ease-in-out text-center">
+                        IRS 2023 (a entregar em 2024)
+                    </p>
                 </p>
 
+
                 <Button className="mb-6 " color="default" variant="bordered" onClick={(e) => {
-                    axios("/api/entities/random").then((r)=>{
-                        console.log((r.data.data as Entity))
+                    axios("/api/entities/random").then((r) => {
                         router.push(`/entity/${(r.data.data as Entity).id}`, { scroll: false })
                     })
                 }} startContent={<GiCardRandom />}>
@@ -35,10 +38,10 @@ export const MainPage = () => {
                 </Button>
 
                 <div className="max-w-md space-y-4 w-full animate-in fade-in slide-in-from-bottom-4 duration-1200 ease-in-out">
-                    
+
                     <SearchForm search={search} setSearch={setSearch} />
                 </div>
-               
+
 
                 <LocalityGrid search={search}></LocalityGrid>
 
