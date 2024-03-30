@@ -32,7 +32,7 @@ export function Header() {
                     var win = window.open(`https://www.linkedin.com/in/martimmourao/`, '_blank');
                     win?.focus();
                 }} startContent={<FaLinkedin />}>
-                    Made By Martim
+                    Made By
                 </Button>
             </div>
         </header>

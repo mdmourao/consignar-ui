@@ -16,8 +16,8 @@ export const MainPage = () => {
 
     return (
         <>
-            <div className="py-[5vh] sm:py-[7vh] flex flex-col items-center justify-center">
-                <h1 className="font-medium text-4xl text-black mb-3 animate-in fade-in slide-in-from-bottom-3 duration-1000 ease-in-out">
+            <div className="grid py-[5vh] sm:py-[7vh] flex flex-col items-center justify-center place-content-center">
+                <h1 className="font-medium text-4xl text-black mb-3 animate-in fade-in slide-in-from-bottom-3 duration-1000 ease-in-out text-center">
                     Consignação IRS 0,5%
                 </h1>
 
