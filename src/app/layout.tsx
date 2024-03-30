@@ -1,11 +1,10 @@
-
-// @ts-nocheck
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { NextUIProvider } from "@nextui-org/react";
 import { Providers } from "./providers";
 import { Header } from "./_components/header";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,6 +15,7 @@ export const metadata: Metadata = {
     icon: "/images/favicon.ico",
   },
 };
+
 
 export default function RootLayout({
   children,
@@ -28,14 +28,7 @@ export default function RootLayout({
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4268848645829698"
           crossOrigin="anonymous"></script>
 
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-HCRLG1QBFD"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
 
-          gtag('config', 'G-HCRLG1QBFD');
-        </script>
 
       </head>
       <body className={inter.className}>
@@ -45,6 +38,7 @@ export default function RootLayout({
         </Providers>
 
       </body>
+      <GoogleAnalytics gaId="G-HCRLG1QBFD" />
     </html>
   );
 }
